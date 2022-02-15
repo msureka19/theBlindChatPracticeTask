@@ -1,6 +1,8 @@
 ---
 - name: This sets up an httpd webserver
   hosts: 10.0.0.4
+  become: yes
+  remote_user: root
   tasks:
   - name: Install apache packages 
     yum:
